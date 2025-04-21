@@ -344,10 +344,6 @@ func secsipidxCLICheck() int {
 	var ret int
 	var err error
 
-	if len(cliops.fpubkey) <= 0 {
-		fmt.Printf("path to public key not provided\n")
-		return -1
-	}
 	if len(cliops.fidentity) > 0 {
 		vIdentity, _ := ioutil.ReadFile(cliops.fidentity)
 		sIdentity = string(vIdentity)
